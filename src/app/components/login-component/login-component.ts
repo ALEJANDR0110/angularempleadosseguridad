@@ -26,8 +26,9 @@ export class LoginComponent {
       password: password
     }
 
-    let response = await this._service.getLogin(usuario);
-    console.log(response)
-    sessionStorage.setItem("key", response)
+    await this._service.getLogin(usuario).then((result) => {
+      sessionStorage.setItem("key", result)
+      console.log(sessionStorage.getItem("key"))
+    }).catch((error) => {})
   }
 }
