@@ -1,0 +1,13 @@
+<h1>Pagina de Login</h1>
+
+<form loginform="ngForm">
+    <label>Username: </label>
+    <input type="text" name="cajausername" #cajausername class="form-control">
+    <br/>
+    <label>Passwowrd: </label>
+    <input type="text" name="cajapassword" #cajapassword class="form-control">
+    <br/>
+    <button class="btn btn-info" (click)="iniciarSesion()">
+        Login
+    </button>
+</form>
